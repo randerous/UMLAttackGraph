@@ -161,6 +161,223 @@
   <packagedElement xmi:type="uml:Model" xmi:id="_vJKGAEVCEey4_LPUk-fe5Q" name="Model36">
     <packagedElement xmi:type="uml:Package" xmi:id="_gtrscD_HEeyWfbBrjmv4Dw" name="Package32"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_GK4YYEVHEey4_LPUk-fe5Q" name="Package34"/>
   <packagedElement xmi:type="uml:Device" xmi:id="_MUOJAEqIEeyKLuZHrVol0g" name="Device37"/>
+  <packagedElement xmi:type="uml:Node" xmi:id="_bmihQNjjEe2bjPEhyyFbuw" name="Workstation01">
+    <deployment xmi:type="uml:Deployment" xmi:id="_AS7ewNjmEe2bjPEhyyFbuw" client="_bmihQNjjEe2bjPEhyyFbuw" supplier="_JnFAINjlEe2bjPEhyyFbuw" deployedArtifact="_JnFAINjlEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_eHW4MNjjEe2bjPEhyyFbuw" name="Workstation02">
+    <deployment xmi:type="uml:Deployment" xmi:id="_BXc20NjmEe2bjPEhyyFbuw" client="_eHW4MNjjEe2bjPEhyyFbuw" supplier="_OEEv4NjlEe2bjPEhyyFbuw" deployedArtifact="_OEEv4NjlEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_lDY2MNjjEe2bjPEhyyFbuw" name="VPNBridege">
+    <deployment xmi:type="uml:Deployment" xmi:id="_9pDScNjlEe2bjPEhyyFbuw" client="_lDY2MNjjEe2bjPEhyyFbuw" supplier="_dPdU8NjlEe2bjPEhyyFbuw" deployedArtifact="_dPdU8NjlEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_nZTksNjjEe2bjPEhyyFbuw" name="VPNBridgeExternal">
+    <deployment xmi:type="uml:Deployment" xmi:id="_-TJYUNjlEe2bjPEhyyFbuw" client="_nZTksNjjEe2bjPEhyyFbuw" supplier="_ShxDMNjlEe2bjPEhyyFbuw" deployedArtifact="_ShxDMNjlEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_rLfc4NjjEe2bjPEhyyFbuw" name="Domain Controller Server">
+    <deployment xmi:type="uml:Deployment" xmi:id="_EXlccNjlEe2bjPEhyyFbuw" client="_rLfc4NjjEe2bjPEhyyFbuw" supplier="_xbPHMNjkEe2bjPEhyyFbuw" deployedArtifact="_xbPHMNjkEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_uPsNsNjjEe2bjPEhyyFbuw" name="CallCenter">
+    <deployment xmi:type="uml:Deployment" xmi:id="_AxzzINjmEe2bjPEhyyFbuw" client="_uPsNsNjjEe2bjPEhyyFbuw" supplier="_RFjj4NjlEe2bjPEhyyFbuw" deployedArtifact="_RFjj4NjlEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_v6gJsNjjEe2bjPEhyyFbuw" name="DMSSever">
+    <deployment xmi:type="uml:Deployment" xmi:id="_7iPW8NjlEe2bjPEhyyFbuw" client="_v6gJsNjjEe2bjPEhyyFbuw" supplier="_XoY-wNjlEe2bjPEhyyFbuw" deployedArtifact="_XoY-wNjlEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_x45wENjjEe2bjPEhyyFbuw" name="DMSClientApplication">
+    <deployment xmi:type="uml:Deployment" xmi:id="_8-sG0NjlEe2bjPEhyyFbuw" client="_x45wENjjEe2bjPEhyyFbuw" supplier="_bCjYgNjlEe2bjPEhyyFbuw" deployedArtifact="_bCjYgNjlEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_2Y8MwNjjEe2bjPEhyyFbuw" name="DataCenter">
+    <deployment xmi:type="uml:Deployment" xmi:id="__GcdgNjlEe2bjPEhyyFbuw" client="_2Y8MwNjjEe2bjPEhyyFbuw" supplier="_HSDCcNjlEe2bjPEhyyFbuw" deployedArtifact="_HSDCcNjlEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_4y9_MNjjEe2bjPEhyyFbuw" name="ICSNetwork"/>
+  <packagedElement xmi:type="uml:Node" xmi:id="_9p0ZYNjjEe2bjPEhyyFbuw" name="CorporateNetWork"/>
+  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_JvHXQNjkEe2bjPEhyyFbuw" memberEnd="_JvH-UtjkEe2bjPEhyyFbuw _JvIlYNjkEe2bjPEhyyFbuw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JvH-UNjkEe2bjPEhyyFbuw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JvH-UdjkEe2bjPEhyyFbuw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JvH-UtjkEe2bjPEhyyFbuw" name="icsnetwork" type="_4y9_MNjjEe2bjPEhyyFbuw" association="_JvHXQNjkEe2bjPEhyyFbuw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JvIlYNjkEe2bjPEhyyFbuw" name="dmssever" type="_v6gJsNjjEe2bjPEhyyFbuw" association="_JvHXQNjkEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_KJGkkNjkEe2bjPEhyyFbuw" memberEnd="_KJHLodjkEe2bjPEhyyFbuw _KJHLotjkEe2bjPEhyyFbuw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KJGkkdjkEe2bjPEhyyFbuw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KJHLoNjkEe2bjPEhyyFbuw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_KJHLodjkEe2bjPEhyyFbuw" name="icsnetwork" type="_4y9_MNjjEe2bjPEhyyFbuw" association="_KJGkkNjkEe2bjPEhyyFbuw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_KJHLotjkEe2bjPEhyyFbuw" name="dmsclientapplication" type="_x45wENjjEe2bjPEhyyFbuw" association="_KJGkkNjkEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_KkccwNjkEe2bjPEhyyFbuw" memberEnd="_KkdD0tjkEe2bjPEhyyFbuw _KkdD09jkEe2bjPEhyyFbuw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KkdD0NjkEe2bjPEhyyFbuw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KkdD0djkEe2bjPEhyyFbuw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_KkdD0tjkEe2bjPEhyyFbuw" name="vpnbridege" type="_lDY2MNjjEe2bjPEhyyFbuw" association="_KkccwNjkEe2bjPEhyyFbuw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_KkdD09jkEe2bjPEhyyFbuw" name="icsnetwork" type="_4y9_MNjjEe2bjPEhyyFbuw" association="_KkccwNjkEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_LzDk8NjkEe2bjPEhyyFbuw" memberEnd="_LzEMAtjkEe2bjPEhyyFbuw _LzEzENjkEe2bjPEhyyFbuw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LzEMANjkEe2bjPEhyyFbuw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LzEMAdjkEe2bjPEhyyFbuw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_LzEMAtjkEe2bjPEhyyFbuw" name="corporatenetwork" type="_9p0ZYNjjEe2bjPEhyyFbuw" association="_LzDk8NjkEe2bjPEhyyFbuw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_LzEzENjkEe2bjPEhyyFbuw" name="vpnbridege" type="_lDY2MNjjEe2bjPEhyyFbuw" association="_LzDk8NjkEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_MKLrgNjkEe2bjPEhyyFbuw" memberEnd="_MKMSktjkEe2bjPEhyyFbuw _MKMSk9jkEe2bjPEhyyFbuw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MKMSkNjkEe2bjPEhyyFbuw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MKMSkdjkEe2bjPEhyyFbuw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_MKMSktjkEe2bjPEhyyFbuw" name="vpnbridgeexternal" type="_nZTksNjjEe2bjPEhyyFbuw" association="_MKLrgNjkEe2bjPEhyyFbuw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_MKMSk9jkEe2bjPEhyyFbuw" name="corporatenetwork" type="_9p0ZYNjjEe2bjPEhyyFbuw" association="_MKLrgNjkEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_MkaJYNjkEe2bjPEhyyFbuw" memberEnd="_MkawctjkEe2bjPEhyyFbuw _Mkawc9jkEe2bjPEhyyFbuw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MkawcNjkEe2bjPEhyyFbuw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MkawcdjkEe2bjPEhyyFbuw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_MkawctjkEe2bjPEhyyFbuw" name="domain controller server" type="_rLfc4NjjEe2bjPEhyyFbuw" association="_MkaJYNjkEe2bjPEhyyFbuw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Mkawc9jkEe2bjPEhyyFbuw" name="corporatenetwork" type="_9p0ZYNjjEe2bjPEhyyFbuw" association="_MkaJYNjkEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_NAuR8NjkEe2bjPEhyyFbuw" memberEnd="_NAuR89jkEe2bjPEhyyFbuw _NAu5ANjkEe2bjPEhyyFbuw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NAuR8djkEe2bjPEhyyFbuw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NAuR8tjkEe2bjPEhyyFbuw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NAuR89jkEe2bjPEhyyFbuw" name="workstation01" type="_bmihQNjjEe2bjPEhyyFbuw" association="_NAuR8NjkEe2bjPEhyyFbuw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NAu5ANjkEe2bjPEhyyFbuw" name="corporatenetwork" type="_9p0ZYNjjEe2bjPEhyyFbuw" association="_NAuR8NjkEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_OEQLgNjkEe2bjPEhyyFbuw" memberEnd="_OEQyktjkEe2bjPEhyyFbuw _OEQyk9jkEe2bjPEhyyFbuw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OEQykNjkEe2bjPEhyyFbuw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OEQykdjkEe2bjPEhyyFbuw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_OEQyktjkEe2bjPEhyyFbuw" name="datacenter" type="_2Y8MwNjjEe2bjPEhyyFbuw" association="_OEQLgNjkEe2bjPEhyyFbuw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_OEQyk9jkEe2bjPEhyyFbuw" name="corporatenetwork" type="_9p0ZYNjjEe2bjPEhyyFbuw" association="_OEQLgNjkEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_O5B3YNjkEe2bjPEhyyFbuw" memberEnd="_O5DFgNjkEe2bjPEhyyFbuw _O5DFgdjkEe2bjPEhyyFbuw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_O5CecNjkEe2bjPEhyyFbuw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O5CecdjkEe2bjPEhyyFbuw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_O5DFgNjkEe2bjPEhyyFbuw" name="corporatenetwork" type="_9p0ZYNjjEe2bjPEhyyFbuw" association="_O5B3YNjkEe2bjPEhyyFbuw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_O5DFgdjkEe2bjPEhyyFbuw" name="callcenter" type="_uPsNsNjjEe2bjPEhyyFbuw" association="_O5B3YNjkEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_PrJQ0NjkEe2bjPEhyyFbuw" memberEnd="_PrJ34djkEe2bjPEhyyFbuw _PrJ34tjkEe2bjPEhyyFbuw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PrJQ0djkEe2bjPEhyyFbuw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PrJ34NjkEe2bjPEhyyFbuw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_PrJ34djkEe2bjPEhyyFbuw" name="workstation02" type="_eHW4MNjjEe2bjPEhyyFbuw" association="_PrJQ0NjkEe2bjPEhyyFbuw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_PrJ34tjkEe2bjPEhyyFbuw" name="corporatenetwork" type="_9p0ZYNjjEe2bjPEhyyFbuw" association="_PrJQ0NjkEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_xbPHMNjkEe2bjPEhyyFbuw" name="Domain Controller" fileName=""/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_HSDCcNjlEe2bjPEhyyFbuw" name="Storage Application"/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_JnFAINjlEe2bjPEhyyFbuw" name="VpnApplication1" fileName=""/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_OEEv4NjlEe2bjPEhyyFbuw" name="VpnApplication2"/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_RFjj4NjlEe2bjPEhyyFbuw" name="CallCenterApp"/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_ShxDMNjlEe2bjPEhyyFbuw" name="externalVpnBridge"/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_XoY-wNjlEe2bjPEhyyFbuw" name="DMSServerApp"/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_bCjYgNjlEe2bjPEhyyFbuw" name="DMSClientAPP"/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_dPdU8NjlEe2bjPEhyyFbuw" name="ICSVpnBridge"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ArL50Nj-Ee2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:AssociationClass" xmi:id="_Ct70sNj-Ee2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:AssociationClass" xmi:id="_IwbioNj-Ee2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_RgBwANj-Ee2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_bOdkMNj-Ee2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_q8EFgNj-Ee2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_BOEH8Nj_Ee2bjPEhyyFbuw" name="system">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_GHO2UNj_Ee2bjPEhyyFbuw" name="DomainControlP" type="_wec6kNj_Ee2bjPEhyyFbuw" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_G5OT8Nj_Ee2bjPEhyyFbuw" name="DMSClientP" type="_y-WrgNj_Ee2bjPEhyyFbuw" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_HZ270Nj_Ee2bjPEhyyFbuw" name="VPN-ServerP" type="_O13aYNj_Ee2bjPEhyyFbuw" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_H14wgNj_Ee2bjPEhyyFbuw" name="CallCenterP" type="_mguGINj_Ee2bjPEhyyFbuw" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_IdoF8Nj_Ee2bjPEhyyFbuw" name="OfficeSWP" type="_iS6B4Nj_Ee2bjPEhyyFbuw" aggregation="composite"/>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_Z9n_sNkEEe2bjPEhyyFbuw">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_Z9omwNkEEe2bjPEhyyFbuw" role="_5-jX0Nj_Ee2bjPEhyyFbuw"/>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_Z9omwdkEEe2bjPEhyyFbuw" role="_GHO2UNj_Ee2bjPEhyyFbuw"/>
+    </ownedConnector>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_tZQR8NkEEe2bjPEhyyFbuw">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_tZQ5ANkEEe2bjPEhyyFbuw" role="_ArO1wNkBEe2bjPEhyyFbuw"/>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_tZQ5AdkEEe2bjPEhyyFbuw" role="_HZ270Nj_Ee2bjPEhyyFbuw"/>
+    </ownedConnector>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_19824NkEEe2bjPEhyyFbuw">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_199d8NkEEe2bjPEhyyFbuw" role="_HZ270Nj_Ee2bjPEhyyFbuw"/>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_199d8dkEEe2bjPEhyyFbuw" role="_TvrXENkBEe2bjPEhyyFbuw"/>
+    </ownedConnector>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_5tZkINkEEe2bjPEhyyFbuw">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_5taLMNkEEe2bjPEhyyFbuw" role="_wyZU0NkAEe2bjPEhyyFbuw"/>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_5taLMdkEEe2bjPEhyyFbuw" role="_eIDgINkBEe2bjPEhyyFbuw"/>
+    </ownedConnector>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_BNLvcNkFEe2bjPEhyyFbuw">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_BNMWgNkFEe2bjPEhyyFbuw" role="_mGwcENkBEe2bjPEhyyFbuw"/>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_BNMWgdkFEe2bjPEhyyFbuw" role="_G5OT8Nj_Ee2bjPEhyyFbuw"/>
+    </ownedConnector>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_FeQjENkFEe2bjPEhyyFbuw">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_FeRKINkFEe2bjPEhyyFbuw" role="_H14wgNj_Ee2bjPEhyyFbuw"/>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_FeRKIdkFEe2bjPEhyyFbuw" role="_ICxrENkBEe2bjPEhyyFbuw"/>
+    </ownedConnector>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_NSYmsNkFEe2bjPEhyyFbuw">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_NSZNwNkFEe2bjPEhyyFbuw" role="_IdoF8Nj_Ee2bjPEhyyFbuw"/>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_NSZ00NkFEe2bjPEhyyFbuw" role="_49DMoNkBEe2bjPEhyyFbuw"/>
+    </ownedConnector>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_Om0DANkFEe2bjPEhyyFbuw">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_Om0qENkFEe2bjPEhyyFbuw" role="_IdoF8Nj_Ee2bjPEhyyFbuw"/>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_Om0qEdkFEe2bjPEhyyFbuw" role="_vRwMANkBEe2bjPEhyyFbuw"/>
+    </ownedConnector>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_QVa54NkFEe2bjPEhyyFbuw">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_QVbg8NkFEe2bjPEhyyFbuw" role="_B_Gb8NkCEe2bjPEhyyFbuw"/>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_QVbg8dkFEe2bjPEhyyFbuw" role="_HDHvcNkCEe2bjPEhyyFbuw"/>
+    </ownedConnector>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_R3kpINkFEe2bjPEhyyFbuw">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_R3lQMNkFEe2bjPEhyyFbuw" role="_--pisNkBEe2bjPEhyyFbuw"/>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_R3lQMdkFEe2bjPEhyyFbuw" role="_HDHvcNkCEe2bjPEhyyFbuw"/>
+    </ownedConnector>
+    <packagedElement xmi:type="uml:Component" xmi:id="_3aCMoNj_Ee2bjPEhyyFbuw" name="DomainController">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_5-jX0Nj_Ee2bjPEhyyFbuw" name="DomainControllerP" type="__xK2sNj_Ee2bjPEhyyFbuw" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_lgfiwNkAEe2bjPEhyyFbuw" name="DMSSeverAPP">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_wyZU0NkAEe2bjPEhyyFbuw" name="DMSServerP" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_9E3zENkAEe2bjPEhyyFbuw" name="ExterVPNBridge">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_ArO1wNkBEe2bjPEhyyFbuw" name="VPNSeverP" type="_DQWd4NkBEe2bjPEhyyFbuw" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_Hkho0NkBEe2bjPEhyyFbuw" name="CallCenterAPP">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_ICxrENkBEe2bjPEhyyFbuw" name="CallCenterP" type="_JvXvwNkBEe2bjPEhyyFbuw" aggregation="composite"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_O13aYNj_Ee2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_iS6B4Nj_Ee2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_mguGINj_Ee2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_wec6kNj_Ee2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_y-WrgNj_Ee2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="__xK2sNj_Ee2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_zl-2wNkAEe2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_DQWd4NkBEe2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_JvXvwNkBEe2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_OvYtANkBEe2bjPEhyyFbuw" name="ICS-VPN-Bridge">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_TvrXENkBEe2bjPEhyyFbuw" name="VPNServerP" type="_V3ILwNkBEe2bjPEhyyFbuw" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_V3ILwNkBEe2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_ZtojQNkBEe2bjPEhyyFbuw" name="DMSClientApp">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_eIDgINkBEe2bjPEhyyFbuw" name="DMSServerR" type="_laTlwNkBEe2bjPEhyyFbuw" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_mGwcENkBEe2bjPEhyyFbuw" name="DMSAppP" type="_laTlwNkBEe2bjPEhyyFbuw" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_laTlwNkBEe2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_uVnT4NkBEe2bjPEhyyFbuw" name="VPNApp1">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_uVnT4dkBEe2bjPEhyyFbuw" name="DMSServerP" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_vRwMANkBEe2bjPEhyyFbuw" name="WorkStationP" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_--pisNkBEe2bjPEhyyFbuw" name="StoreR" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_36BCUNkBEe2bjPEhyyFbuw" name="VPNApp2">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_36BCUdkBEe2bjPEhyyFbuw" name="DMSServerP" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_36BCUtkBEe2bjPEhyyFbuw" name="WorkStationP" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_49DMoNkBEe2bjPEhyyFbuw" name="WorkStationP" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_B_Gb8NkCEe2bjPEhyyFbuw" name="StoreR" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_EPnGANkCEe2bjPEhyyFbuw" name="StorageAPP">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_HDHvcNkCEe2bjPEhyyFbuw" name="StoreP" type="_Zvz4ENkCEe2bjPEhyyFbuw" aggregation="composite">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bmkI4NkDEe2bjPEhyyFbuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bnWzENkDEe2bjPEhyyFbuw" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_WlFBcNkCEe2bjPEhyyFbuw" client="_zl-2wNkAEe2bjPEhyyFbuw" supplier="_O13aYNj_Ee2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_Zvz4ENkCEe2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_nNPGgNkCEe2bjPEhyyFbuw" name="Component92">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_n4m-wNkCEe2bjPEhyyFbuw" name="Port1" aggregation="composite"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_tmwNUNkCEe2bjPEhyyFbuw" client="_nNPGgNkCEe2bjPEhyyFbuw" supplier="_sUPckNkCEe2bjPEhyyFbuw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_oO4JsNkCEe2bjPEhyyFbuw" name="Component93">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_olUTwNkCEe2bjPEhyyFbuw" name="Port1" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_sUPckNkCEe2bjPEhyyFbuw" name="Interface94"/>
 </uml:Model>
