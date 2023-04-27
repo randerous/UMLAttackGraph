@@ -1,0 +1,29 @@
+PolicySet{
+    combining:DenyUnlessPermit
+    Policy{
+        combining:DenyUnlessPermit
+        Rule{
+            name:"test"
+            decision:permit
+            Expression{
+                UserSpecification{
+                    attribute:role
+                    attribute:admin
+                }
+            }
+            AnyOf{
+                AllOf{
+                    NodeMatch:TerminalServer
+                }
+                AllOf{
+                    NodeMatch:StorageServer
+                }
+                AllOf{
+                    NodeMatch:MachineController
+                }
+            }
+        }
+    }
+}
+
+

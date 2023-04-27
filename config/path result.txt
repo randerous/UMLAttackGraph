@@ -1,0 +1,10 @@
+attackPaths:
+Workstation01;CVE-2014-1706;VPNApp1;User:ICSUser,VPNGateway;VPN-Bridge
+
+attackPaths:
+Workstation01;CVE-2014-1706;VPNApp1;User:ICSUser;DMSClientApplication;;DMSClientAPP
+
+attackPaths:
+Workstation01;CVE-2014-1706;VPNApp1;User:ICSUser;DMSServer;;DMSServerAPP
+
+

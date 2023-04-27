@@ -1,0 +1,16 @@
+Attacker
+{
+    Attack{
+        CVEID:CVE-2014-1706
+        CWEID:119
+    }    
+    Privilegs:null
+    CompromisedElements{
+        Node:Workstation01
+    }
+}
+
+
+
+
+
