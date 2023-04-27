@@ -1,0 +1,26 @@
+AttributeProviderSet{
+    componentAttributeProvider{
+        component:DomainController
+        UserSpecification{
+            attribute:role
+            attributeValue:BackofficeAdmin
+        }
+    }
+    componentAttributeProvider{
+        component:VpnApplication1
+        UserSpecification{
+            attribute:role
+            attributeValue:BackofficeAdmin
+        }
+        UserSpecification{
+            attribute:role
+            attributeValue:ICSUser
+        }
+        UserSpecification{
+            attribute:role
+            attributeValue:VPNGateWay
+        }
+    }
+}
+
+

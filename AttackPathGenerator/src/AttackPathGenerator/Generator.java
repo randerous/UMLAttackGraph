@@ -53,9 +53,9 @@ import org.eclipse.uml2.uml.Port;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+ 
 
-import UMLgenerator.UMLgenerator;
-
+import attackGraph.contextBuilder;
 /**
  * A Java program that may be run stand-alone (with the required EMF and UML2
  * bundle JARs on the classpath) to create the example model illustrated in the
@@ -75,7 +75,7 @@ public class Generator {
 		Graph G;
 		umlParser umlParser = new umlParser();
 //		G = umlParser.genGraph("../test/test.uml");
-		G = umlParser.genGraph("D:\\×ÀÃæ\\»ªÎª\\proj\\UMLGraph\\UMLGraph\\AttackPathGenerator\\Example_UML.uml");
+		G = umlParser.genGraph("D:\\ï¿½ï¿½ï¿½ï¿½\\ï¿½ï¿½Îª\\proj\\UMLGraph\\UMLGraph\\AttackPathGenerator\\Example_UML.uml");
 
 		// simplify graph;
 //				G.showInfo();
@@ -104,9 +104,11 @@ public class Generator {
 //			generator();
 //		}
 //		UMLgenerator.generator(50, 2);
-		generator();
+//		generator();
 //		System.out.println(averagenums);
 		
+//		System.out.println("fds");
+		contextBuilder context = new contextBuilder();
 		
 
 	}

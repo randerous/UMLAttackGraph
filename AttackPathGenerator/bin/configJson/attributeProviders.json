@@ -1,0 +1,37 @@
+{
+    "AttributeProviderSet":
+    [
+        {
+            "componentAttributeProvider":
+            {
+                "component":"DomainController",
+                "UserSpecification":[
+                    {
+                        "attribute": "role",
+                        "attributeValue": "BackofficeAdmin"
+                    }
+                ]
+            }
+        },
+        {
+            "componentAttributeProvider" :
+            {
+                "component":"VpnApplication1",
+                "UserSpecification":[
+                    {
+                        "attribute": "role",
+                        "attributeValue": "BackofficeAdmin"
+                    },
+                    {
+                        "attribute": "role",
+                        "attributeValue": "ICSUser"
+                    },
+                    {
+                        "attribute": "role",
+                        "attributeValue": "VPNGateWay"
+                    }
+                ]
+            }
+        } 
+    ]      
+}

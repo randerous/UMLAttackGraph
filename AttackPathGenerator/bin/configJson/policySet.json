@@ -1,0 +1,90 @@
+{
+    "PolicySet":{
+        "combining":"DenyUnlessPermit",
+        "Policies":
+        [
+            {
+                "Policy":
+                {
+                    "combining":"DenyUnlessPermit",
+                    "Rules":
+                    [
+                        {
+                            "rule":{
+                                "name":"test1",
+                                "decision":"permit",
+                                "Expression":[
+                                    {
+                                        "attribute": "role",
+                                        "attributeValue": "BackofficeAdmin"
+                                    }
+                                ],
+                                "entities":[
+                                    {
+                                        "NodeMatch":"Workstation01"
+                                    },
+                                    {
+                                        "NodeMatch":"Workstation02"
+                                    },
+                                    {
+                                        "NodeMatch":"DataCenter"
+                                    },
+                                    {
+                                        "NodeMatch":"CallCenter"
+                                    },
+                                    {
+                                        "NodeMatch":"VpnBridgeExternal"
+                                    },
+                                    {
+                                        "NodeMatch":"CorporateNetwork"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "rule":{
+                                "name":"test2",
+                                "decision":"permit",
+                                "Expression":[
+                                    {
+                                        "attribute": "role",
+                                        "attributeValue": "ICSUser"
+                                    }
+                                ],
+                                "entities":[
+                                    {
+                                        "NodeMatch":"DMSServer"
+                                    },
+                                    {
+                                        "NodeMatch":"DMSClientApplication"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "rule":{
+                                "name":"test3",
+                                "decision":"permit",
+                                "Expression":[
+                                    {
+                                        "attribute": "role",
+                                        "attributeValue": "ICSUser"
+                                    },
+                                    {
+                                        "attribute": "role",
+                                        "attributeValue": "VPNGateWay"
+                                    }
+                                ],
+                                "entities":[
+                                    {
+                                        "NodeMatch":"VpnBridge"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

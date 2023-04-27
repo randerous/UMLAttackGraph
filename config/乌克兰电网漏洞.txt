@@ -1,0 +1,11 @@
+Vulnerability
+{
+    CVEID:CVE-2014-1706
+    CWEID:119
+    AttackVector:None
+    RequiredElements:null
+    RequiredPrivileges:null
+    GainedPrivileges:null
+    IsTakeOver:true
+    ConfidentialityImpact:High
+}

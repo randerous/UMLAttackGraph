@@ -1,5 +1,4 @@
-package AttackPathGenerator;
-
+package AttackPathGenerator; 
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,6 +57,7 @@ public class umlParser {
 	{
 		Graph G;
 		G = new Graph();
+		 
 		URI uri = URI.createFileURI(path); 
 		Package p = parseUML(uri);
 		processNode(G, p, 0);
