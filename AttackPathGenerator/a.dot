@@ -1,0 +1,20 @@
+digraph test{
+workstation01->vpnapp01[label= "CVE-2014-1706"];
+vpnapp01->storageapp[label= ""];
+corporatenetwork->callcenter[label= "BackofficeAdmin "];
+corporatenetwork->vpnbridgeexternal[label= ""];
+corporatenetwork->domain controller server[label= ""];
+corporatenetwork->vpnbridege[label= "ICSUser VPNGateWay "];
+corporatenetwork->datacenter[label= "BackofficeAdmin "];
+storageapp->vpnapp02[label= ""];
+corporatenetwork->workstation02[label= "BackofficeAdmin "];
+domain controller server->domaincontroller[label= ""];
+vpnbridgeexternal->extervpnbridge[label= ""];
+callcenter->callcenterapp[label= ""];
+vpnbridege->icsnetwork[label= ""];
+vpnbridege->ics-vpn-bridge[label= ""];
+icsnetwork->dmssever[label= ""];
+icsnetwork->dmsclientapplication[label= "ICSUser "];
+dmsclientapplication->dmsclientapp[label= ""];
+dmssever->dmsserverapp[label= ""];
+}

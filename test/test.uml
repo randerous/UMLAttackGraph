@@ -9,12 +9,22 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Node" xmi:id="_bmihQNjjEe2bjPEhyyFbuw" name="Workstation01">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_JhjQkOXCEe2bhc1vIxqtYg" annotatedElement="_bmihQNjjEe2bjPEhyyFbuw">
+      <body>{&#xD;
+&quot;surface&quot;:&quot;true&quot;&#xD;
+}</body>
+    </ownedComment>
     <deployment xmi:type="uml:Deployment" xmi:id="_AS7ewNjmEe2bjPEhyyFbuw" client="_bmihQNjjEe2bjPEhyyFbuw" supplier="_JnFAINjlEe2bjPEhyyFbuw" deployedArtifact="_JnFAINjlEe2bjPEhyyFbuw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Node" xmi:id="_eHW4MNjjEe2bjPEhyyFbuw" name="Workstation02">
     <deployment xmi:type="uml:Deployment" xmi:id="_BXc20NjmEe2bjPEhyyFbuw" client="_eHW4MNjjEe2bjPEhyyFbuw" supplier="_OEEv4NjlEe2bjPEhyyFbuw" deployedArtifact="_OEEv4NjlEe2bjPEhyyFbuw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Node" xmi:id="_lDY2MNjjEe2bjPEhyyFbuw" name="VPNBridege">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_NI_RUOXCEe2bhc1vIxqtYg" annotatedElement="_lDY2MNjjEe2bjPEhyyFbuw">
+      <body>{&#xD;
+&quot;asset&quot;:&quot;true&quot;&#xD;
+}</body>
+    </ownedComment>
     <deployment xmi:type="uml:Deployment" xmi:id="_9pDScNjlEe2bjPEhyyFbuw" client="_lDY2MNjjEe2bjPEhyyFbuw" supplier="_dPdU8NjlEe2bjPEhyyFbuw" deployedArtifact="_dPdU8NjlEe2bjPEhyyFbuw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Node" xmi:id="_nZTksNjjEe2bjPEhyyFbuw" name="VPNBridgeExternal">
@@ -107,17 +117,17 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_PrJ34djkEe2bjPEhyyFbuw" name="workstation02" type="_eHW4MNjjEe2bjPEhyyFbuw" association="_PrJQ0NjkEe2bjPEhyyFbuw"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_PrJ34tjkEe2bjPEhyyFbuw" name="corporatenetwork" type="_9p0ZYNjjEe2bjPEhyyFbuw" association="_PrJQ0NjkEe2bjPEhyyFbuw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Artifact" xmi:id="_xbPHMNjkEe2bjPEhyyFbuw" name="Domain Controller" fileName=""/>
-  <packagedElement xmi:type="uml:Artifact" xmi:id="_HSDCcNjlEe2bjPEhyyFbuw" name="Storage Application"/>
-  <packagedElement xmi:type="uml:Artifact" xmi:id="_JnFAINjlEe2bjPEhyyFbuw" name="VpnApplication1" fileName=""/>
-  <packagedElement xmi:type="uml:Artifact" xmi:id="_OEEv4NjlEe2bjPEhyyFbuw" name="VpnApplication2"/>
-  <packagedElement xmi:type="uml:Artifact" xmi:id="_RFjj4NjlEe2bjPEhyyFbuw" name="CallCenterApp" fileName="">
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_xbPHMNjkEe2bjPEhyyFbuw" name="DomainController" fileName=""/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_HSDCcNjlEe2bjPEhyyFbuw" name="StorageApp" fileName=""/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_JnFAINjlEe2bjPEhyyFbuw" name="VPNApp01" fileName=""/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_OEEv4NjlEe2bjPEhyyFbuw" name="VPNApp02" fileName=""/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_RFjj4NjlEe2bjPEhyyFbuw" name="CallCenterAPP" fileName="">
     <manifestation xmi:type="uml:Manifestation" xmi:id="_Hi_vsOTyEe2qeImtdKORGA" supplier="_RFjj4NjlEe2bjPEhyyFbuw" utilizedElement="_RFjj4NjlEe2bjPEhyyFbuw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Artifact" xmi:id="_ShxDMNjlEe2bjPEhyyFbuw" name="externalVpnBridge" fileName=""/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_ShxDMNjlEe2bjPEhyyFbuw" name="ExterVpnBridge" fileName=""/>
   <packagedElement xmi:type="uml:Artifact" xmi:id="_XoY-wNjlEe2bjPEhyyFbuw" name="DMSServerApp"/>
   <packagedElement xmi:type="uml:Artifact" xmi:id="_bCjYgNjlEe2bjPEhyyFbuw" name="DMSClientAPP"/>
-  <packagedElement xmi:type="uml:Artifact" xmi:id="_dPdU8NjlEe2bjPEhyyFbuw" name="ICSVpnBridge"/>
+  <packagedElement xmi:type="uml:Artifact" xmi:id="_dPdU8NjlEe2bjPEhyyFbuw" name="ICS-Vpn-Bridge" fileName=""/>
   <packagedElement xmi:type="uml:Association" xmi:id="_ArL50Nj-Ee2bjPEhyyFbuw"/>
   <packagedElement xmi:type="uml:AssociationClass" xmi:id="_Ct70sNj-Ee2bjPEhyyFbuw"/>
   <packagedElement xmi:type="uml:AssociationClass" xmi:id="_IwbioNj-Ee2bjPEhyyFbuw"/>
@@ -173,7 +183,12 @@
     <packagedElement xmi:type="uml:Component" xmi:id="_3aCMoNj_Ee2bjPEhyyFbuw" name="DomainController">
       <ownedAttribute xmi:type="uml:Port" xmi:id="_5-jX0Nj_Ee2bjPEhyyFbuw" name="DomainControllerP" type="__xK2sNj_Ee2bjPEhyyFbuw" aggregation="composite"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_lgfiwNkAEe2bjPEhyyFbuw" name="DMSSeverAPP">
+    <packagedElement xmi:type="uml:Component" xmi:id="_lgfiwNkAEe2bjPEhyyFbuw" name="DMSServerAPP">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_TuUmkOXCEe2bhc1vIxqtYg" annotatedElement="_lgfiwNkAEe2bjPEhyyFbuw">
+        <body>{&#xD;
+&quot;asset&quot;:&quot;true&quot;&#xD;
+}</body>
+      </ownedComment>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_wyZU0NkAEe2bjPEhyyFbuw" name="DMSServerP" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_9E3zENkAEe2bjPEhyyFbuw" name="ExterVPNBridge">
@@ -197,16 +212,37 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_V3ILwNkBEe2bjPEhyyFbuw"/>
   <packagedElement xmi:type="uml:Component" xmi:id="_ZtojQNkBEe2bjPEhyyFbuw" name="DMSClientApp">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_SBUSMOXCEe2bhc1vIxqtYg" annotatedElement="_ZtojQNkBEe2bjPEhyyFbuw">
+      <body>{&#xD;
+&quot;asset&quot;:&quot;true&quot;&#xD;
+}</body>
+    </ownedComment>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_eIDgINkBEe2bjPEhyyFbuw" name="DMSServerR" type="_laTlwNkBEe2bjPEhyyFbuw" aggregation="composite"/>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_mGwcENkBEe2bjPEhyyFbuw" name="DMSAppP" type="_laTlwNkBEe2bjPEhyyFbuw" aggregation="composite"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_laTlwNkBEe2bjPEhyyFbuw"/>
-  <packagedElement xmi:type="uml:Component" xmi:id="_uVnT4NkBEe2bjPEhyyFbuw" name="VPNApp1">
+  <packagedElement xmi:type="uml:Component" xmi:id="_uVnT4NkBEe2bjPEhyyFbuw" name="VPNApp01">
+    <ownedComment xmi:type="uml:Comment" xmi:id="__9w-QOWiEe2eF6uxfUzA6Q" annotatedElement="_uVnT4NkBEe2bjPEhyyFbuw">
+      <body>{&#xD;
+    &quot;vulnerabilities&quot;:[&#xD;
+        {&#xD;
+            &quot;CVEID&quot;:&quot;CVE-2014-1706&quot;,&#xD;
+            &quot;CWEID&quot;:&quot;119&quot;,&#xD;
+            &quot;AttackVector&quot;:&quot;None&quot;,&#xD;
+            &quot;RequiredElements&quot;:[],&#xD;
+            &quot;RequiredPrivileges&quot;:[],&#xD;
+            &quot;GainedPrivileges&quot;:[],&#xD;
+            &quot;IsTakeOver&quot;:&quot;true&quot;,&#xD;
+            &quot;ConfidentialityImpact&quot;:&quot;High&quot;&#xD;
+        }&#xD;
+    ]&#xD;
+}</body>
+    </ownedComment>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_uVnT4dkBEe2bjPEhyyFbuw" name="DMSServerP" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_vRwMANkBEe2bjPEhyyFbuw" name="WorkStationP" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_--pisNkBEe2bjPEhyyFbuw" name="StoreR" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Component" xmi:id="_36BCUNkBEe2bjPEhyyFbuw" name="VPNApp2">
+  <packagedElement xmi:type="uml:Component" xmi:id="_36BCUNkBEe2bjPEhyyFbuw" name="VPNApp02">
     <ownedAttribute xmi:type="uml:Port" xmi:id="_36BCUdkBEe2bjPEhyyFbuw" name="DMSServerP" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_36BCUtkBEe2bjPEhyyFbuw" name="WorkStationP" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_49DMoNkBEe2bjPEhyyFbuw" name="WorkStationP" type="_zl-2wNkAEe2bjPEhyyFbuw" aggregation="composite"/>

@@ -11,7 +11,7 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
 
-import UMLgenerator.UMLgenerator;
+//import UMLgenerator.UMLgenerator;
 public class AttackPath {
 	public ArrayList <ArrayList<Vertex>> pathSet;
 	Stack<Vertex> path;
@@ -55,11 +55,11 @@ public class AttackPath {
 			path.add(cur);
 			addPath(path);
 //			System.out.println(pathSet.size());
-			if(UMLgenerator.DEBUG && pathSet.size()%1000000 == 0)
-			{
-				System.out.println(pathSet.size());
-			}
-			path.remove(cur);
+//			if(UMLgenerator.DEBUG && pathSet.size()%1000000 == 0)
+//			{
+//				System.out.println(pathSet.size());
+//			}
+//			path.remove(cur);
 			return;
 		}
 		visit.add(cur.itself.id);

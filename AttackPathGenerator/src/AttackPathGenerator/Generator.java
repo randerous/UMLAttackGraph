@@ -56,6 +56,9 @@ import com.alibaba.fastjson.JSONObject;
  
 
 import attackGraph.contextBuilder;
+import attackGraph.graph.genGraphWithContext;
+
+
 /**
  * A Java program that may be run stand-alone (with the required EMF and UML2
  * bundle JARs on the classpath) to create the example model illustrated in the
@@ -69,49 +72,26 @@ public class Generator {
 	static int averagenums;
 //	private static Graph G;
 //	private static int global_id;
-
+ 
 	public static void generator() throws IOException {
 		// generator graph
 		Graph G;
 		umlParser umlParser = new umlParser();
-//		G = umlParser.genGraph("../test/test.uml");
-		G = umlParser.genGraph("D:\\����\\��Ϊ\\proj\\UMLGraph\\UMLGraph\\AttackPathGenerator\\Example_UML.uml");
-
-		// simplify graph;
-//				G.showInfo();
-//				G.showDetailInfo();
-
-		out("---gen graph finished--");
-		simplifier simplifier = new simplifier();
-		G = simplifier.simplify(G);
-		out("---gen simplified graph finished--");
-				G.showInfo();
-//				G.showDetailInfo();
-
-//				G.showDetailInfo();
-		AttackPath paths = new AttackPath();
-		paths.genPath(G, 100);
-		paths.showInfo();
-		averagenums += paths.getNums()/10;
+		umlParser.genGraphTest("../test/test.uml"); 
 
 	}
 
 	public static void main(String[] args) throws Exception {
  
-//		for(int i = 0; i < 10; i++)
-//		{
-//			UMLgenerator.generator(100, 2);
-//			generator();
-//		}
-//		UMLgenerator.generator(50, 2);
-//		generator();
-//		System.out.println(averagenums);
-		
-//		System.out.println("fds");
+		//parsing attacker, policy, attributeProvider,
 		contextBuilder context = new contextBuilder();
-		
-
+		genGraphWithContext gen = new genGraphWithContext(context);
+		gen.gen();
+		gen.drawGraph();
+//		generator(); 
+ 
 	}
+	  
 
 	// tools to simplify system.out, & for debug
 	protected static void out(String format, Object... args) {

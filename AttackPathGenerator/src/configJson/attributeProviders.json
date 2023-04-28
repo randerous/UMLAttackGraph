@@ -16,7 +16,7 @@
         {
             "componentAttributeProvider" :
             {
-                "component":"VpnApplication1",
+                "component":"VpnApp01",
                 "UserSpecification":[
                     {
                         "attribute": "role",

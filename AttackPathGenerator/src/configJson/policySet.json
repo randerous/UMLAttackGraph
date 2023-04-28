@@ -33,7 +33,7 @@
                                         "NodeMatch":"CallCenter"
                                     },
                                     {
-                                        "NodeMatch":"VpnBridgeExternal"
+                                        "NodeMatch":"VpnBridegeExternal"
                                     },
                                     {
                                         "NodeMatch":"CorporateNetwork"
@@ -77,7 +77,7 @@
                                 ],
                                 "entities":[
                                     {
-                                        "NodeMatch":"VpnBridge"
+                                        "NodeMatch":"VpnBridege"
                                     }
                                 ]
                             }

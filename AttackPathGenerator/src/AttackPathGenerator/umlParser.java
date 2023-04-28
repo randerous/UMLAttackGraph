@@ -37,6 +37,7 @@ import Visualization.visualizeGraph;
 public class umlParser {
 	
 	public static int it;
+	public Package p;
 	public umlParser()
 	{
 		
@@ -53,17 +54,24 @@ public class umlParser {
 	}
 
 	
-	public Graph genGraph(String path)
-	{
-		Graph G;
-		G = new Graph();
+	// public Graph genGraph(String path)
+	// {
+	// 	Graph G;
+	// 	G = new Graph();
 		 
-		URI uri = URI.createFileURI(path); 
-		Package p = parseUML(uri);
-		processNode(G, p, 0);
-		processEdge(G, p);
+	// 	URI uri = URI.createFileURI(path); 
+	// 	Package p = parseUML(uri);
+	// 	processNode(G, p, 0);
+	// 	processEdge(G, p);
 		
-		return G;
+	// 	return G;
+	// }
+
+	public void genGraphTest(String path)
+	{
+		URI uri = URI.createFileURI(path); 
+		this.p = parseUML(uri);
+		processNode(p, 0);
 	}
 
 	// parse UML to get root package
@@ -79,7 +87,7 @@ public class umlParser {
 	}
 
 	// parse component diagram
-	public void processNode(Graph G, Namespace p, int level) {
+	public void processNode( Namespace p, int level) {
 
 		// get all vertexes 
 //		System.out.printf("level: %d name: %s\n", level, p.toString());
@@ -87,17 +95,24 @@ public class umlParser {
 		for (NamedElement i : p.getMembers()) {
 //			System.out.printf("level: %d name: %s\n", level, i.toString());
 
-			if (i instanceof Component || i instanceof Interface || i instanceof Package || i instanceof Model
-					|| i instanceof org.eclipse.uml2.uml.Node || i instanceof Device
-					|| i instanceof ExecutionEnvironment || i instanceof Artifact || i instanceof Port) {
-				createNode(G, i.getOwnedComments(), getId(i.toString()), i.getName(), level);
-				if (level > 0) {
-					G.addEdge(getId(p.toString()), getId(i.toString()));
-					G.addEdge(getId(i.toString()), getId(p.toString()));
+			if (i instanceof Component || i instanceof org.eclipse.uml2.uml.Node || i instanceof Device
+					|| i instanceof ExecutionEnvironment || i instanceof Artifact ) {
+				
+				System.out.println(i.getName());
+				if(!i.getOwnedComments().isEmpty())
+				{
+					String info = i.getOwnedComments().get(0).getBody();
+					System.out.println(info);
+					
 				}
-				if (i instanceof Namespace && ((Namespace) i).getMembers().size() > 0) {
-					processNode(G, ((Namespace) i), level + 1);
-				}
+				// createNode(G, i.getOwnedComments(), getId(i.toString()), i.getName(), level);
+				// if (level > 0) {
+				// 	G.addEdge(getId(p.toString()), getId(i.toString()));
+				// 	G.addEdge(getId(i.toString()), getId(p.toString()));
+				// }
+				// if (i instanceof Namespace && ((Namespace) i).getMembers().size() > 0) {
+				// 	processNode(G, ((Namespace) i), level + 1);
+				// }
 			}
 
 		}

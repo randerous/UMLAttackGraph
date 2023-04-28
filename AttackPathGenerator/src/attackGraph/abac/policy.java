@@ -55,7 +55,7 @@ public class policy {
         {
             for(String e: r.entities)
             {
-                if(e.equals(entity))
+                if(e.toLowerCase().equals(entity.toLowerCase()))
                 {
                     return r;
                 }
