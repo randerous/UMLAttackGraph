@@ -131,7 +131,15 @@ public class genGraphWithContext {
             {
                 for(user_specification attr: pSet.findRule(s).attribute)
                 {
-                    jSet.retainAll(attr.sources);
+                	for(user_specification spec: this.context.attacker.privileges)
+                	{
+                		if(spec.role.equals(attr.role))
+                		{
+                			jSet.retainAll(spec.sources);
+                		}
+                	}
+                    
+                    
                     cause += attr.role + " ";
                 }
             }
