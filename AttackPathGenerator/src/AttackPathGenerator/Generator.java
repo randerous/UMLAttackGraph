@@ -72,14 +72,14 @@ public class Generator {
 	static int averagenums;
 //	private static Graph G;
 //	private static int global_id;
- 
-	public static void generator() throws IOException {
-		// generator graph
-		Graph G;
-		umlParser umlParser = new umlParser();
-		umlParser.genGraphTest("../test/test.uml"); 
-
-	}
+// 
+//	public static void generator() throws IOException {
+//		// generator graph
+//		Graph G;
+//		umlParser umlParser = new umlParser();
+//		umlParser.genGraphTest("../test/test.uml"); 
+//
+//	}
 
 	public static void main(String[] args) throws Exception {
  
@@ -88,6 +88,10 @@ public class Generator {
 		genGraphWithContext gen = new genGraphWithContext(context);
 		gen.gen();
 		gen.drawGraph();
+
+		AttackPath pathGen = new AttackPath(gen.g);
+		pathGen.showInfo();
+
 //		generator(); 
  
 	}

@@ -75,7 +75,7 @@ public class connectionBuilder {
 				{ 
 					for(Element e : d.getTargets())
 					{
-						System.out.println(nodeName + " " + getName(e));
+						// System.out.println(nodeName + " " + getName(e));
 						createEdgehelper(nodeName, getName(e)); 
 					}
 				}
@@ -134,6 +134,18 @@ public class connectionBuilder {
     		  {
     			  for(Element e: i.getOwnedElements())
     			  {
+    				  type = "none";
+    				  if(!e.getOwnedComments().isEmpty()  )
+    				  {
+    					String info = e.getOwnedComments().get(0).getBody();
+    					if(info.contains("surface"))
+    					{
+    						type = "surface";
+    					}else if(info.contains("asset"))
+    					{
+    						type = "asset";
+    					}
+    				  }
     				  if(e instanceof Component) {
     					  node n = new node(getName(e), "component");
 						  n.type = type;

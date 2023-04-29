@@ -9,6 +9,7 @@ import java.util.List;
 public class AttackGraph {
     public List<attackEdge> edges;
     public List<attackVertex> vertexs;
+    
     public List<attackEdge> getEdges() {
         return edges;
     }
@@ -30,16 +31,19 @@ public class AttackGraph {
     public  void drawGraph() throws Exception {
 
         String filepath = "a.dot";
-        String[] cmd= {"dot","-Tsvg",filepath,"-o","out.svg"};
+//        "cmd", "/c"
+//        String[] cmd= {"dot.exe"};
+        String[] cmd= {"C:\\Program Files\\Graphviz\\bin\\dot.exe","-Tsvg",filepath,"-o","out.svg"};
 		try {
             BufferedWriter wr = new BufferedWriter(new FileWriter(filepath));
             wr.write("digraph test{\n");
+            wr.write("nodesep=1\n");
             
             for(attackEdge edge: this.edges)
             {
                 String source = edge.from.name;
                 String dest = edge.to.name;
-                wr.append(source+"->"+dest+"[label= \""+ edge.cause +"\"];\n");
+                wr.append("\"" + source+ "\"" +"->"+ "\"" + dest+ "\"" + "[label= \""+ edge.cause +"\"];\n");
             }
     		// for (Map.Entry<String, Vertex> v : g.vertexes.entrySet()) {
     		// 	 String source=v.getKey();
@@ -76,8 +80,9 @@ public class AttackGraph {
     public  void executeCMD(String[] cmd) throws Exception{
 		try {
 			Process p=Runtime.getRuntime().exec(cmd);
-			p.waitFor();
-			p.destroy();
+//			p.waitFor();
+//			p.destroy(); 
+			System.out.println("draw over" + p.waitFor());
 		}catch (Exception e) {
 			e.printStackTrace();
 		}

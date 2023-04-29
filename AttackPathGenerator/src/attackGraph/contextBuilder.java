@@ -15,6 +15,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -65,7 +67,7 @@ public class contextBuilder {
 		if(e instanceof NamedElement)
 		{
 			NamedElement na = (NamedElement) e;
-			System.out.println(na.getName());
+			// System.out.println(na.getName());
 			return na.getName();
 		}
 		return null;
@@ -113,7 +115,7 @@ public class contextBuilder {
 
 							ArrayList<String> elmList = new ArrayList<String>();
 							ArrayList<user_specification> specList = new ArrayList<user_specification>();
-							ArrayList<user_specification> gainList = new ArrayList<user_specification>();
+							Set<user_specification> gainList = new HashSet<user_specification>();
 
 							for (int k = 0; k < elemArr.size(); k++) {
 								JSONObject obj_e = elemArr.getJSONObject(k);

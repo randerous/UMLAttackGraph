@@ -10,12 +10,12 @@ import attackGraph.user_specification.user_specification;
 public class attacker {
     public List<attack> attacks;
     public Set<String> compromiseElements;
-    public List<user_specification> privileges;
+    public Set<user_specification> privileges;
     
     public attacker() {
         this.attacks = new ArrayList<attack>();
         this.compromiseElements = new HashSet<String>();
-        this.privileges = new ArrayList<user_specification>();
+        this.privileges = new HashSet<user_specification>();
     }
     public List<attack> getAttacks() {
         return attacks;
@@ -24,12 +24,7 @@ public class attacker {
         this.attacks = attacks;
     }
  
-    public List<user_specification> getPrivileges() {
-        return privileges;
-    }
-    public void setPrivileges(List<user_specification> privileges) {
-        this.privileges = privileges;
-    }
+    
 
     
     

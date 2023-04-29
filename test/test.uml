@@ -36,7 +36,7 @@
   <packagedElement xmi:type="uml:Node" xmi:id="_uPsNsNjjEe2bjPEhyyFbuw" name="CallCenter">
     <deployment xmi:type="uml:Deployment" xmi:id="_AxzzINjmEe2bjPEhyyFbuw" client="_uPsNsNjjEe2bjPEhyyFbuw" supplier="_RFjj4NjlEe2bjPEhyyFbuw" deployedArtifact="_RFjj4NjlEe2bjPEhyyFbuw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Node" xmi:id="_v6gJsNjjEe2bjPEhyyFbuw" name="DMSSever">
+  <packagedElement xmi:type="uml:Node" xmi:id="_v6gJsNjjEe2bjPEhyyFbuw" name="DMSServer">
     <deployment xmi:type="uml:Deployment" xmi:id="_7iPW8NjlEe2bjPEhyyFbuw" client="_v6gJsNjjEe2bjPEhyyFbuw" supplier="_XoY-wNjlEe2bjPEhyyFbuw" deployedArtifact="_XoY-wNjlEe2bjPEhyyFbuw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Node" xmi:id="_x45wENjjEe2bjPEhyyFbuw" name="DMSClientApplication">
@@ -47,13 +47,6 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Node" xmi:id="_4y9_MNjjEe2bjPEhyyFbuw" name="ICSNetwork"/>
   <packagedElement xmi:type="uml:Node" xmi:id="_9p0ZYNjjEe2bjPEhyyFbuw" name="CorporateNetWork"/>
-  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_JvHXQNjkEe2bjPEhyyFbuw" memberEnd="_JvH-UtjkEe2bjPEhyyFbuw _JvIlYNjkEe2bjPEhyyFbuw">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JvH-UNjkEe2bjPEhyyFbuw" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JvH-UdjkEe2bjPEhyyFbuw" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_JvH-UtjkEe2bjPEhyyFbuw" name="icsnetwork" type="_4y9_MNjjEe2bjPEhyyFbuw" association="_JvHXQNjkEe2bjPEhyyFbuw"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_JvIlYNjkEe2bjPEhyyFbuw" name="dmssever" type="_v6gJsNjjEe2bjPEhyyFbuw" association="_JvHXQNjkEe2bjPEhyyFbuw"/>
-  </packagedElement>
   <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_KJGkkNjkEe2bjPEhyyFbuw" memberEnd="_KJHLodjkEe2bjPEhyyFbuw _KJHLotjkEe2bjPEhyyFbuw">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KJGkkdjkEe2bjPEhyyFbuw" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KJHLoNjkEe2bjPEhyyFbuw" key="nature" value="UML_Nature"/>
@@ -256,4 +249,11 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Usage" xmi:id="_WlFBcNkCEe2bjPEhyyFbuw" client="_zl-2wNkAEe2bjPEhyyFbuw" supplier="_O13aYNj_Ee2bjPEhyyFbuw"/>
   <packagedElement xmi:type="uml:Interface" xmi:id="_Zvz4ENkCEe2bjPEhyyFbuw"/>
+  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_787Q4OZkEe2bhc1vIxqtYg" memberEnd="_78_iUOZkEe2bhc1vIxqtYg _78_iUeZkEe2bhc1vIxqtYg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_78-7QOZkEe2bhc1vIxqtYg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_78-7QeZkEe2bhc1vIxqtYg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_78_iUOZkEe2bhc1vIxqtYg" name="icsnetwork" type="_4y9_MNjjEe2bjPEhyyFbuw" association="_787Q4OZkEe2bhc1vIxqtYg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_78_iUeZkEe2bhc1vIxqtYg" name="dmsserver" type="_v6gJsNjjEe2bjPEhyyFbuw" association="_787Q4OZkEe2bhc1vIxqtYg"/>
+  </packagedElement>
 </uml:Model>

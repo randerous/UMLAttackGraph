@@ -3,7 +3,8 @@ package AttackPathGenerator;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList; 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
@@ -11,252 +12,130 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
 
+import attackGraph.connection.G;
+import attackGraph.connection.node;
+import attackGraph.graph.AttackGraph;
+import attackGraph.graph.attackEdge;
+
 //import UMLgenerator.UMLgenerator;
 public class AttackPath {
-	public ArrayList <ArrayList<Vertex>> pathSet;
-	Stack<Vertex> path;
+	//restruct graph for easy finding path
+	public G g;
+	public Map<String, String> causes;//(edge, causes),(fromName@toName, causes)
+
+	//store attackPath
+	public ArrayList <ArrayList<String>> pathSet;
+	Stack<String> path;
 	Set<String> visit;
-	
- 
-	
-	public AttackPath()
-	{
-		pathSet = new ArrayList<ArrayList<Vertex>>();
-		path = new Stack<Vertex>();
-		visit = new HashSet<String>();
+	String surface;
+	ArrayList <String> assets;
 
-		 
-		 
-				
-	}
-	
-	public void addPath(Stack <Vertex> p)
-	{
-		ArrayList<Vertex> path = new ArrayList<Vertex>();
-		for(Vertex v: p) {
-			path.add(v);
-		}
-		pathSet.add(path);
-	}
-	
-	
-	private void dfs(Vertex cur, Vertex dest, int maxSize)  
-	{
 
-//        out.write(cur.getName()+"\n");
-        
-//		System.out.println(visit.size());
-//		System.out.println(cur.getName()+" "+cur.getItself().getID());
-//		if(pathSet.size() > 1000000) return;
-//		System.out.println(cur.getName());
-		if(pathSet.size() == maxSize+1)
-			return;
-		if(cur.itself.id == dest.itself.id) {
-			path.add(cur);
-			addPath(path);
-//			System.out.println(pathSet.size());
-//			if(UMLgenerator.DEBUG && pathSet.size()%1000000 == 0)
-//			{
-//				System.out.println(pathSet.size());
-//			}
-//			path.remove(cur);
-			return;
-		}
-		visit.add(cur.itself.id);
-		path.add(cur);
-		 
-		for(Vertex v: cur.next_vertexes)
+	public AttackPath(AttackGraph graph)
+	{
+		this.pathSet = new ArrayList<ArrayList<String>>();
+		this.path = new Stack<String>();
+		this.visit = new HashSet<String>();
+		this.g = new G();
+		this.causes = new HashMap<String, String>();
+		this.assets = new ArrayList<String>();
+		convert(graph);
+		findInput();
+		genPathSet();
+	}
+
+	public void convert(AttackGraph graph)
+	{
+		for(attackEdge edge: graph.edges)
 		{
-			if(!visit.contains(v.itself.id))
+			String edgeString = edge.from.name + "@" + edge.to.name;
+			causes.put(edgeString, edge.cause);
+
+			if(! g.nSet.containsKey(edge.from.name.toLowerCase()))
 			{
-				dfs(v,dest, maxSize);
+				node n = new node(edge.from.name.toLowerCase(), edge.from.archType);
+				n.type = edge.from.type;
+				this.g.nSet.put(n.name, n);
+				
+			}
+
+			if(! g.nSet.containsKey(edge.to.name.toLowerCase()))
+			{
+				node n = new node(edge.to.name.toLowerCase(), edge.to.archType);
+				n.type = edge.to.type;
+				this.g.nSet.put(n.name, n);
+			}
+			this.g.nSet.get(edge.from.name).conSet.add(edge.to.name);			
+		}
+
+	}
+
+	//find surface and asset
+	public void findInput()
+	{
+		for(String str: this.g.nSet.keySet())
+		{
+			if(this.g.nSet.get(str).type.equals("surface"))
+			{
+				this.surface = str;
+			}else if(this.g.nSet.get(str).type.equals("asset"))
+			{
+				this.assets.add(str);
 			}
 		}
-		visit.remove(cur.itself.id); 
-		path.remove(cur);		
+
+	}
+	
+	public void addPath()
+	{
+		ArrayList<String> tmpPath = new ArrayList<String>(this.path);
+		this.pathSet.add(tmpPath);
+	}
+	
+	
+	private void dfs(node cur, node dest, int maxSize)  
+	{
+
+		if(pathSet.size() >= maxSize) return;
+		if(cur.name.equals(dest.name))
+		{
+			this.path.add(dest.name);
+			addPath();
+			this.path.remove(dest.name);
+			return;
+		}
+		
+		this.visit.add(cur.name);
+		this.path.add(cur.name); 
+
+		for(String next: cur.conSet)
+		{
+			if(!this.visit.contains(next))
+			{
+				dfs(this.g.nSet.get(next), dest, maxSize);
+			}
+		}
+
+		this.visit.remove(cur.name);
+		this.path.remove(cur.name);
+ 	
 	}
 	
 	public int getNums()
 	{
 		return pathSet.size();
 	}
-	Boolean dfs1(Set<Vertex> vi, Vertex source ,Vertex dest)
-	{
-		if(source.itself.id == dest.itself.id)
-			return true;
-		vi.add(source);
-//		System.out.println(source.getName());
-		for(Vertex v: source.getNextV())
-		{
-			if( !vi.contains(v) && dfs1(vi, v, dest))
-				return true;
-		}
-		vi.remove(source);
-		return false;
-	}
-	
-	
-	
-	
 
-	
-//	private void dfs_nr(Vertex cur, Vertex dest)  
-//	{
-//		 
-//		Stack<Set<Vertex>> next = new Stack<Set<Vertex>>();
-//		path.push(cur);
-//		
-//		Set<Vertex> t = new HashSet<Vertex>(cur.getNextV());
-//		next.push(t);
-//		while(!path.empty())
-//		{
-//			if(next.peek().isEmpty())
-//			{
-////				System.out.println("empty");
-//				visit.remove(path.peek().itself.id);
-//				path.pop();
-//				next.pop();
-//				continue;
-//			}
-//			Set<Vertex> tmp = next.pop(); 
-//			Vertex v = null; 
-//			for(Vertex i: tmp)
-//			{
-//				v = i;
-//				break;
-//			}
-//			tmp.remove(v); 
-//			next.push(tmp);
-//			
-////			System.out.println(v.getName());
-//			if(v.itself.id == dest.itself.id) {
-//				path.push(v);
-//				addPath(path);
-////				System.out.println(pathSet.size());
-//				if(pathSet.size()%10000 == 0)
-//				{
-//					System.out.println(pathSet.size());
-//				}
-//				path.pop(); 
-//				continue;
-//			}
-//			visit.add(v.itself.id);
-//			path.push(v);
-//			
-//			tmp = new HashSet<Vertex>();
-//			for(Vertex i: v.getNextV())
-//			{
-//				if(!visit.contains(i.itself.id))
-//				{
-//					tmp.add(i);
-////					System.out.println(i.getName());
-//				}
-//					
-//			}
-//			next.push(tmp);
-//			
-////			visit.remove(v.itself.id);
-////			path.pop();
-//		}
-//			
-//	}
-	/*
-	 * generator all path from nodes belongs exposure to nodes belongs asset
-	 * (1)minimal graph, delete nodes that can't reach target asset
-	 * (2)dfs
-	 * (3)restore graph
-	 */
-	
-	public void genPath(Graph p, int maxSize)  
+
+	public void genPathSet()
 	{
-		pathSet.clear();
-		path.clear();
-		ArrayList<Vertex> source = new ArrayList<Vertex>();
-		ArrayList<Vertex> destination = new ArrayList<Vertex>();
-		for(Map.Entry<String, Vertex> v : p.vertexes.entrySet())
+		for(String asset: this.assets)
 		{
-			if(v.getValue().type == 0)
-			{
-				source.add(v.getValue());
-//				System.out.println(v.getValue().itself.name);
-			}
-				
-			if(v.getValue().type == 2)
-			{
-//				System.out.println(v.getValue().itself.name);
-				destination.add(v.getValue());
-			}
-				
+			dfs(this.g.nSet.get(surface), this.g.nSet.get(asset), this.g.nSet.size());
 		}
-		
-		System.out.println("exposure nums : "+  source.size());
-		System.out.println("asset nums : "+  destination.size());
-		
-		
-		simplifier simplifier = new simplifier();
-		if(!source.isEmpty() && !destination.isEmpty())
-		{
-			for(Vertex cur: source)
-			{
-				for(Vertex dest: destination)
-				{
-//					System.out.println("--");
-					//if can't reach, o(n+v), continue
-					Set<Vertex> vi = new HashSet<Vertex>();
-					if(!simplifier.bfs(vi, cur, dest))
-					{
-//						System.out.print("can't reach");
-						continue;
-					}
-					
-					simplifier.remove_invalidNode(p, dest);
-					Vertex s = p.vertexes.get(cur.itself.id);
-					Vertex d = p.vertexes.get(dest.itself.id);
-					
+	}
  
-					if(s!= null && d != null)
-					{
-						dfs(s, d, maxSize); 
-						visit.clear(); 
-					}
-					simplifier.restore_invalid_node(p);
-					
-				}
-				
-			} 
-		}
-		
-//		if(pathSet.size() < maxSize)
-//		{
-//			writeIntoFile();
-//		}
-	}
-	
-	public void writeIntoFile()
-	{
-		boolean is_write = true;
-		if(is_write) {
-			try {
-	            BufferedWriter out = new BufferedWriter(new FileWriter("path.txt"));
-	            out.write("path nums:"+pathSet.size()+"\n");
-	            
-	            
-	    		int i = 0;
-	    		for(ArrayList<Vertex> path: pathSet)
-	    		{
-	    			out.write("path: " + i + "\n");
-	    			i++;
-	    			for(Vertex v: path) {
-	    				out.write(v.getName());
-	    			}
-	    			out.write("end path\n");
-	    		}
-	    		out.close();
-//	            System.out.println("successfully");
-	        } catch (IOException e) {
-	        }
-		}
-	}
+  
 	
 	public void showInfo()
 	{
@@ -264,40 +143,29 @@ public class AttackPath {
 			System.out.println("No path");
 			return;
 		}
-		
-		
+
 		System.out.printf("path nums: %d\n\n", pathSet.size());
-		
-		
-		
-//		int i = 0;
-//		for(ArrayList<Vertex> path: pathSet)
-//		{
-//			System.out.printf("path: %d\n\n", i++);
-//			for(Vertex v: path) {
-//				v.showInfo();
-//			}
-//			System.out.println("end path\n");
-//		}
-	}
-	
-	public void showInfo2() {
-		if(pathSet.isEmpty()) {
-			System.out.println("No path");
-			return;
+
+		for(String asset: this.assets)
+		{
+			System.out.println("asset: " + asset);
 		}
-		int i=0;
-		System.out.printf("path nums: %d\n\n", pathSet.size());
-		for(ArrayList<Vertex> path: pathSet)
-		{	
-			System.out.print(i+":");
-			for(Vertex v:path) {
-				System.out.print(v.getItself().getID()+"->");
+
+		for(ArrayList<String> path: this.pathSet)
+		{
+			for(int i = 0; i < path.size(); i++)
+			{
+				System.out.print(path.get(i));
+				if(i < path.size() - 1)
+				{
+					String cause = this.causes.get(path.get(i) + "@" + path.get(i + 1));
+					System.out.print(" ; "+ cause + " ; ");
+				}
 			}
-			System.out.print("\n");
-			i++;
+			System.out.println();
 		}
 		
+ 
 	}
 	
 
