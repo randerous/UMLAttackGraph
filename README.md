@@ -12,42 +12,20 @@ fastjson-1.2.78.jar，右键项目AttackPathGenerator->properties->Java Build Pa
 勾选添加到环境路径，stable_windows_10_cmake_Release_x64_graphviz-install-2.49.3-win64
 
 ## 项目结构
-### test
-ATM实例的UML图
+### 输入
+#### test
+实例的UML图 以及 漏洞、暴露面、资产的标注
+#### configJson
+标注的安全信息，包括访问策略，架构中的用户证书，攻击者能力
+
+### 处理
+#### contextBuilder
+解析json配置，构建访问控制、攻击者模型、漏洞模型、连通图模型
+#### genGraphWithContext
+攻击图生成和可视化
 
 ### AttackPathGenerator
-连通图生成代码，路径生成代码，新增了类成员提取接口
-数据结构修改
-邻接表存储图，新增了前驱节点信息
-```
-public class Vertex {
-    int type; // 0: surface, 1: Node, 2: Asset
-    Node itself;// keep current Node info
-    Set<Vertex> next_vertexes;
-    Set<Vertex> pre_vertexes;
-    
-```
+攻击路径生成
 
-
-### adjustmentWork
-架构优化算法
-
-### controlNodeWork
-隔离域操作
-
-### CriticalNodesGenerator
-控制点生成算法
-
-### EvaluationWork
-架构评估
-
-### StartOver
-启动函数
-
-### Visualization
-图可视化
-
-### UMLgenerator
-uml样例生成算法
 
 
