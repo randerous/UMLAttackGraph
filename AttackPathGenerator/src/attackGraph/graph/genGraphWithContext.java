@@ -170,17 +170,24 @@ public class genGraphWithContext {
                             attackVertex dest = new attackVertex(collection.nSet.get(str).type, str,
                                     collection.nSet.get(str).archType);
                             this.g.vertexs.add(dest);
+                            boolean connectedExist = false;
                             for (String elem : this.context.attacker.compromiseElements) {
                                 if (collection.nSet.get(elem.toLowerCase()).conSet.contains(str)) {
                                     for (attackVertex v : this.g.vertexs) {
                                         if (v.name.equals(elem.toLowerCase())) {
                                             attackEdge edge = new attackEdge(v, dest, cause);
                                             this.g.edges.add(edge);
+                                            connectedExist = true;
                                             break;
                                         }
                                     }
                                     break;
                                 }
+                            }
+                            if(!connectedExist)
+                            {
+                                attackEdge  edge = new attackEdge(this.g.vertexs.get(this.g.vertexs.size() - 1), dest, cause);
+                                this.g.edges.add(edge);
                             }
                             newCompromiseElems.add(str);
                             returnVal = true;
